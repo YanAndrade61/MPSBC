@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main(){
@@ -8,7 +7,6 @@ int main(){
     string nomes[2];
 
     while(true){
-
         cin >> N;
         if(N == 0)break;
 
@@ -20,7 +18,6 @@ int main(){
             cout << nomes[(a+b)% 2] << "\n";    
         }
         cout << endl;
-
         teste++;
     }
     
