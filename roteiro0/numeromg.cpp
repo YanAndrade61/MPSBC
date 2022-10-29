@@ -28,9 +28,11 @@ int main(){
             res.push_back(dectoBase36(resto));
         }
         reverse(res.begin(),res.end());
+        
         for(char c : res){
             cout << c;
         }
+
         cout << "\n";
         res.clear();
     }
