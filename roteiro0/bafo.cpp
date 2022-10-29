@@ -11,21 +11,15 @@ int main(){
         cin >> R;
         if(R == 0)break;
 
-        aldo = 0;
-        beto = 0;
+        aldo = beto = 0;
         for (int i = 0; i < R; i++){
             cin >> a >> b;
             aldo += a;
             beto += b;
         }
         
-        cout << "Teste " << teste << "\n";
-        if(aldo > beto)
-            cout << "Aldo" << "\n\n";
-        else
-            cout << "Beto" << "\n\n";
-        
-        teste++;
+        cout << "Teste " << teste++ << "\n";
+        cout << (aldo > beto ? "Aldo\n\n" : "Beto\n\n");
     }
     return 0;
 }
