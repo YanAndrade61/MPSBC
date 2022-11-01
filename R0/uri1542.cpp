@@ -10,14 +10,11 @@ int main(){
         cin >> Q >> D >> P;
         if(!cin)break;
         
-        // dias = (D*P)/(P-Q);
         pag = (int)abs((Q*D*P)/(P-Q));
         
         cout << pag;
-        if(pag > 1)
-            cout << " paginas\n";
-        else
-            cout << " pagina\n";
+        pag > 1 ? cout << " paginas\n" : cout << " pagina\n";
+    
     }
 
     return 0;
