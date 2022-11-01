@@ -26,14 +26,8 @@ int main(){
                 break;
             }
         }
-        if(ehPrimo)
-            cout << "It is a prime word.\n";
-        else
-            cout << "It is not a prime word.\n";
-
+        ehPrimo ? cout << "It is a prime word.\n" : cout << "It is not a prime word.\n"; 
     }
-    
-    
     return 0;
 }
 
@@ -41,6 +35,5 @@ int char2dec(char c){
 
     if(c > 'Z')
         return c - 96;
-    
     return c - 65 + 27;
 }
