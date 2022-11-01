@@ -12,13 +12,12 @@ int main(){
 
         cin >> nomes[0] >> nomes[1];
 
-        cout << "Teste " << teste << "\n";
+        cout << "Teste " << teste++ << "\n";
         for (int i = 0; i < N; i++){
             cin >> a >> b;
             cout << nomes[(a+b)% 2] << "\n";    
         }
         cout << endl;
-        teste++;
     }
     
     return 0;
