@@ -11,14 +11,13 @@ int main(){
         cin >> N;
         if(N == 0)break;
         
-        cout << "Teste " << teste << "\n"; 
+        cout << "Teste " << teste++ << "\n"; 
         for (int i = 0; i < N; i++){
             cin >> p;
             if(p == i+1){
-                cout << p << "\n";
+                cout << p << "\n\n";
             }
         }
-        teste++;   
     }
     return 0;
 }
