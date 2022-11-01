@@ -9,15 +9,8 @@ int main(){
 
     cin >> max >> a >> op >> b;
     
-    if(op == '+')
-        a += b;
-    else
-        a *= b;
+    a = op == '+' ? a+b : a*b;
+    a > max ? cout << "OVERFLOW\n" : cout << "OK\n";
     
-    if(a > max)
-        cout << "OVERFLOW\n";
-    else
-        cout << "OK\n";
-
     return 0;
 }
