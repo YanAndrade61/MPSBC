@@ -4,17 +4,19 @@ using namespace std;
 
 int main(){
 
-    int M, N, qtd=16, partida=0;
-    vector<char> times;
+    int M, N;
+    char ta, tb;
+    queue<char> times;
 
-    for (int i = 0; i < qtd; i++)
-        times.push_back(char(65+i));
+    for (char c = 'A'; c <= 'P'; c++)
+        times.push(c);
     
-    while(qtd > 1){
-
-        if(ceil(log2(qtd)) == floor(log2(qtd)))
-            partida=0;
-
+    for (int i = 0; i < 15; i++){
+        
+        ta = times.front();times.pop;
+        ta = times.front();times.pop;
+    }
+    
         cin >> M >> N;
         M > N ? times.erase(times.begin()+partida+1) : times.erase(times.begin()+partida);
 
