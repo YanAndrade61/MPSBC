@@ -4,30 +4,23 @@ using namespace std;
 
 int main(){
 
-    int cont;
     char c;
-    string s;    
+    string s,res;    
 
-    while(true){
-
+    while(true){   
         cin >> c >> s;
         if(c == '0' && s == "0")break;
 
-        cont = 0;
+        res = "0";        
         for (int i = 0; i < (int)s.size(); i++){
-            if(s[i] != c){
-                if(s[i] == '0' && cont > 0)
-                    cout << s[i];
-                else if(s[i] != '0'){
-                    cout << s[i];
-                    cont++;
-                }
-            }
+            if(s[i] != c)
+                res += s[i];
         }
-        if(cont == 0)
-            cout << '0';
-        cout << "\n";
-    }
+        
+        while((int)res.size() > 1 && res[0] == '0')
+            res.erase(0,1);
 
+        cout << res <<"\n";
+    }
     return 0;
 }
