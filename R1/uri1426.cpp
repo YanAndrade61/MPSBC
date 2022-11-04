@@ -17,7 +17,7 @@ int main(){
                 m[j][k] = a;
             }    
         }
-        for (int j = 0; j < 9; j += 2){
+        for (int j = 0; j < N-1; j += 2){
             for (int k = 0; k < j+1; k += 2){
                 x = (m[j][k] - m[j+2][k] - m[j+2][k+2])/2;
                 m[j+1][k] = x + m[j+2][k];
@@ -25,9 +25,10 @@ int main(){
                 m[j+2][k+1] = x;
             }    
         }
-        for (int j = 0; j < 9; j += 2){
+        for (int j = 0; j < N; j++){
             for (int k = 0; k <= j; k++){
-                cout << m[j][k] << " ";
+                if(k != 0) cout << " ";
+                cout << m[j][k];
             }
             cout << endl;    
         }
