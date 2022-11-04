@@ -24,10 +24,10 @@ int main(){
         }
         for (int i = 0; i < N; i++){
             for (int j = 0; j < N; j++){
-                if(j== 0)
-                    cout << setw(3) << matrix[i][j];
-                else
-                    cout << " " << setw(3) << matrix[i][j];
+                if(j != 0)
+                    cout << " ";
+
+                cout << setw(3) << matrix[i][j];
             }
             cout << "\n";
         }
