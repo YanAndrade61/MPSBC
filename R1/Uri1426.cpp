@@ -5,22 +5,32 @@ using namespace std;
 
 int main(){
 
-    int teste,a,b,x,s;
-    queue<int>dados,solv,res;
+    int teste,a,x,N=9;
 
     cin >> teste;
-    cin >> a;
-    solv.push(a);
     for (int i = 0; i < teste; i++){
-        cin >> a;
-        if((int)dados.size() > 1)
-            
-        s = solv.front();solv.pop();
-        x = (s - a - b)/2;
-        res.push(s); res.push(a+x); res.push(b+x);
-        res.push(a); res.push(x); res.push(b);
-        solv.push(a); solv.push(b);
-        dados.push(a);    
+
+        vector<vector<int>> m(N,vector<int>(N,1));
+        for (int j = 0; j < N; j += 2){
+            for (int k = 0; k <= j; k += 2){
+                cin >> a;
+                m[j][k] = a;
+            }    
+        }
+        for (int j = 0; j < 9; j += 2){
+            for (int k = 0; k < j+1; k += 2){
+                x = (m[j][k] - m[j+2][k] - m[j+2][k+2])/2;
+                m[j+1][k] = x + m[j+2][k];
+                m[j+1][k+1] = x + m[j+2][k+2];
+                m[j+2][k+1] = x;
+            }    
+        }
+        for (int j = 0; j < 9; j += 2){
+            for (int k = 0; k <= j; k++){
+                cout << m[j][k] << " ";
+            }
+            cout << endl;    
+        }
     }
 
     return 0;
