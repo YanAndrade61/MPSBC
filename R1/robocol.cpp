@@ -14,14 +14,10 @@ int main(){
     orient['S'] = make_tuple(1,0);
     orient['O'] = make_tuple(0,-1);
     orient['L'] = make_tuple(0,1);
-    coord['N']['D'] = 'L';
-    coord['N']['E'] = 'O';
-    coord['S']['D'] = 'O';
-    coord['S']['E'] = 'L';
-    coord['O']['D'] = 'N';
-    coord['O']['E'] = 'S';
-    coord['L']['D'] = 'S';
-    coord['L']['E'] = 'N';
+    coord['N']['D'] = 'L'; coord['N']['E'] = 'O';
+    coord['S']['D'] = 'O'; coord['S']['E'] = 'L';
+    coord['O']['D'] = 'N'; coord['O']['E'] = 'S';
+    coord['L']['D'] = 'S'; coord['L']['E'] = 'N';
 
     while (true)
     {
@@ -41,6 +37,7 @@ int main(){
                 }
             }            
         }
+        
         qtd = 0;
         for (int i = 0; i < S; i++){
             cin >> c;
@@ -48,7 +45,7 @@ int main(){
                 int a,b;
                 a = ri + get<0>(orient[dir]);
                 b = rj + get<1>(orient[dir]); 
-                if(a == N || a < 0 || b == N || b < 0 || arena[a][b] == '#')
+                if(a == N || a < 0 || b == M || b < 0 || arena[a][b] == '#')
                     continue; 
                 arena[ri][rj] = '.';
                 ri = a; 
