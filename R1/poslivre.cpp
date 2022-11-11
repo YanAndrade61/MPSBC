@@ -17,7 +17,7 @@ int main(){
         for (int i = 0; i < N; i++){
             cin >> x1 >> y1 >> x2 >> y2;
 
-            for (int j = min(y1,y2)-1; j <= max(y1,y2)-1; j++){
+             for (int j = min(y1,y2)-1; j <= max(y1,y2)-1; j++){
                 for (int k = min(x1,x2)-1; k <= max(x1,x2)-1; k++){
                     m[j][k] = false;
                 }
