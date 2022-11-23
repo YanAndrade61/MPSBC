@@ -21,7 +21,7 @@ typedef pair < int, int > ii;
 #define tr(c, it)\
  for (typeof (c).begin() it = c.begin(); it != c.end(); it++)
 
-//FOr others
+//For others
 #define present(c, x)(c.find(x) != c.end())
 
 //For vector
