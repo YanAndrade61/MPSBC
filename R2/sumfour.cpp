@@ -22,8 +22,8 @@ int main(){
     for (int i = 0; i < N; i++){
         for (int j = 0; j < N; j++){
             int temp = -(c[i]+d[j]);
-            bounds.first = lower_bound()
-            bounds = equal_range(        );
+            bounds.first = lower_bound();
+            bounds = equal_range();
             cont += bounds.second - bounds.first;
         }
     }
