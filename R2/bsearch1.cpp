@@ -35,7 +35,5 @@ int main(){
         cout << busca(0,N-1,num,seq) << "\n";
     }
     
-
-
     return 0;
 }

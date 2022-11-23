@@ -15,18 +15,23 @@ int main(){
     }
     for (int i = 0; i < N; i++)
         for (int j = 0; j < N; j++)
-            ab.push_back(a[i]+b[i]);
+            ab.push_back(a[i]+b[j]);
 
     sort(ab.begin(),ab.end());
 
     for (int i = 0; i < N; i++){
         for (int j = 0; j < N; j++){
             int temp = -(c[i]+d[j]);
+<<<<<<< HEAD
             bounds.first = lower_bound();
             bounds = equal_range();
+=======
+            bounds = equal_range(ab.begin(),ab.end(),temp);
+>>>>>>> c71a8a34fdbb61f00e04c9e0066fd1eb39bfa300
             cont += bounds.second - bounds.first;
         }
     }
+
     cout << cont << "\n";
     
     return 0;
