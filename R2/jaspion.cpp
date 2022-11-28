@@ -27,8 +27,6 @@ int main(){
                 cout << (dicionario.find(jap) == dicionario.end() ? jap : dicionario[jap]) << ' ';
             cout << "\n";
         }
-        
-
     }
     
     return 0;
