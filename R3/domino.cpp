@@ -80,19 +80,7 @@ int solve(int tab[7][8],int ans[7][8], vector<tuple<int,int,int>> pecas,int i, i
 	int m1,m2;
 	vector<tuple<int,int,int>>::iterator it; 
 
-	// for (int i = 0; i < 7; i++){
-	// 	for (int j = 0; j < 8; j++){
-	// 		cout << ans[i][j] << " ";
-	// 	}
-	// 	cout << "\n";
-	// }
-	// cout << "\n";
-	
-	// if(i >= 7 ){
-	// 	*cont += 1;
-	// 	return 1;
-	// }
-	if(*find(ans,ans+56,1) == ans+56){
+	if(i >= 7 ){
 		*cont += 1;
 		return 1;
 	}
@@ -152,24 +140,27 @@ int solve(int tab[7][8],int ans[7][8], vector<tuple<int,int,int>> pecas,int i, i
 
 int main(){
 
-	vector<tuple<int,int,int>> pecas;
-	int tab[7][8], ans[7][8], cont, N;
-	int n;
-	cin >> N;
 	
+    int tab[7][8], ans[7][8], cont, N;
+    vector<tuple<int,int,int>> pecas;
+    int n;
+	cin >> N;
+		
+    for (int i = 0; i < 7; i++){
+        for (int j = i; j < 7; j++){
+            pecas.push_back(make_tuple(0,i,j));  
+        }
+    }
 	for(int k = 0; k < N; k++){
 		cont = 0;
-		for (int i = 0; i < 7; i++){
+		
+        for (int i = 0; i < 7; i++){
 			for (int j = 0; j < 8; j++){
 				cin >> n;
 				tab[i][j] = n;
 				ans[i][j] = 0;
 			}
 		}
-		for (int i = 0; i < 7; i++)
-			for (int j = i; j < 7; j++)
-				pecas.push_back(make_tuple(0,i,j));
-		
 		solve(tab,ans,pecas,0,0,&cont);
 		cout << "Teste " << k+1 << "\n";
 		cout << cont << "\n\n";
